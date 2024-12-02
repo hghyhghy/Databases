@@ -1,4 +1,3 @@
-
 create  table employee(
 
     eid int primary key ,

@@ -1,4 +1,3 @@
-
 create table product(
 
     pid int primary key ,
