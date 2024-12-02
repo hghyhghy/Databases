@@ -40,3 +40,4 @@ from  salesman
 join customer
 on salesman.city != customer.city
 where  grade is not null;
+
