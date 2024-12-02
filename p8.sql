@@ -35,3 +35,8 @@ insert into customer(cid, cname, city, grade, sid) VALUES
 (3003, 'Jozy Altidor', 'Moscow', 200, 5007),
 (3001, 'Brad Guzan', 'London', NULL, 5005);
 
+select  salesman.sid,salesman.sname,customer.cid,customer.cname,customer.city,salesman.city,customer.grade,salesman.commission
+from  salesman
+join customer
+on salesman.city != customer.city
+where  grade is not null;
