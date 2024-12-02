@@ -103,7 +103,7 @@ create  table  customer(
 
 insert into customer(cid, cname, city, grade, sid) VALUES
                                                            (3002, 'Nick Rimando', 'New York', 100, 5001),
-    (3007, 'Brad Davis', 'New York', 200, 5001),
+    (3007, 'Subham Sarkar', 'New York', 200, 5001),
     (3005, 'Graham Zusi', 'California', 200, 5002),
     (3008, 'Julian Green', 'London', 300, 5002),
     (3004, 'Fabian Johnson', 'Paris', 300, 5006),
