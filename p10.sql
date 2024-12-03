@@ -112,3 +112,21 @@ select courses.cname,courses.fees
 from courses
 where fees > 400;
 
+
+select   max(courses.fees) as maximum, min(courses.fees) as minimum
+from courses ;
+
+
+select  courses.cname,count(student.sid) as studentcount
+from courses
+left join student
+on courses.cid=student.cid
+group by  cname;
+
+select  courses.cname,count(student.sid) as studentcount
+from courses
+left join student
+on courses.cid=student.cid
+group by courses.cname
+having  studentcount > 1;
+
