@@ -1,44 +1,44 @@
-#
-# create table student(
-#
-#     sid int primary key ,
-#     sname varchar(30)
-#
-# );
-#
-# insert into student(sid, sname) VALUES
-#                                     (1, 'Alice'),
-# (2, 'Bob'),
-# (3, 'Charlie'),
-# (4, 'Diana');
-#
-# create table  courses(
-#
-#     cid int primary key ,
-#     cname varchar(30)
-# );
-#
-# insert into courses(cid, cname) VALUES
-#                                     (101, 'Mathematics'),
-# (102, 'Science'),
-# (103, 'History'),
-# (104, 'Art');
-#
-# create table enrollment(
-#
-#     eid int primary key ,
-#     sid int,
-#     cid int,
-#     foreign key (sid) references student(sid),
-#     foreign key (cid) references courses(cid)
-# );
-#
-# insert into enrollment(eid, sid, cid) VALUES
-#                                           (1, 1, 101),
-# (2, 1, 102),
-# (3, 2, 103),
-# (4, 3, 104),
-# (5, 4, 101);
+
+create table student(
+
+    sid int primary key ,
+    sname varchar(30)
+
+);
+
+insert into student(sid, sname) VALUES
+                                    (1, 'Alice'),
+(2, 'Bob'),
+(3, 'Charlie'),
+(4, 'Diana');
+
+create table  courses(
+
+    cid int primary key ,
+    cname varchar(30)
+);
+
+insert into courses(cid, cname) VALUES
+                                    (101, 'Mathematics'),
+(102, 'Science'),
+(103, 'History'),
+(104, 'Art');
+
+create table enrollment(
+
+    eid int primary key ,
+    sid int,
+    cid int,
+    foreign key (sid) references student(sid),
+    foreign key (cid) references courses(cid)
+);
+
+insert into enrollment(eid, sid, cid) VALUES
+                                          (1, 1, 101),
+(2, 1, 102),
+(3, 2, 103),
+(4, 3, 104),
+(5, 4, 101);
 
 select student.sname,courses.cname
 from enrollment
